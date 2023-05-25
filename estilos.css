@@ -1,0 +1,134 @@
+#uno {
+    width: 45%;
+    float: left;
+}
+
+#dos {
+    width: 45%;
+    float: right;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #093366;
+    background-image: url("alura.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto;
+}
+
+footer {
+    background: black;
+    height: 70px;
+    border-top: 2px solid rgba(0, 0, 0, 0.24);
+    /*  poner footer abajo */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
+p {
+    color: white;
+    font-size: 150%;
+}
+
+label {
+    font-size: 1.5rem;
+    color: white;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    width: 90%;
+    height: 50px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    background-color: aliceblue;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+}
+
+button:disabled {
+    background-color: red;
+}
+
+/* contenedor Popup */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 150%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

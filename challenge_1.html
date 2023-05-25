@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Encriptador/Desencriptador de Texto</title>
+    <link rel="shortcut icon" href="programador.png">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>Encriptador/Desencriptador de Texto</h1>
+        <div id="uno">
+            <label>Introduce el texto para encriptar:</label>
+            <textarea id="texto1" onkeypress="return evitarMayusculas(event)"></textarea>
+            <br>
+            <label for="btnEnc" style="font-size: 1rem">
+                <i class="material-icons" style="font-size: 18px">warning</i> No se permiten mayúsculas ni caractéres especiales
+            </label>
+            <button id="btnEnc" onclick="encriptar()" disabled>Vacío</button>
+
+            <br><br><br>
+            <label>Texto encriptado:</label>
+            <textarea id="textoEncriptado" disabled></textarea>
+            <br>
+            <div class="popup">
+                <button id="btnCopiar" style="display: none;" onclick="copiarTexto()">Copiar</button>
+                <span class="popuptext" id="myPopup">Copiado!</span>
+            </div>
+        </div>
+
+        <div id="dos">
+            <label>Introduce el texto encriptado para desencriptar:</label>
+            <textarea id="texto2"></textarea>
+            <br>
+            <button id="btnDes" onclick="desencriptar()" disabled>Vacío</button>
+
+            <br><br><br><br>
+            <label>Texto desencriptado:</label>
+            <textarea id="textoDesencriptado" disabled></textarea>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 Marlen Sandoval, todos los derechos reservados.</p>
+    </footer>
+</body>
+
+<script src="miJavaScript.js"></script>
+
+</html>
